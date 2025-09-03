@@ -101,6 +101,8 @@ class SlackConversationPlugin(ConversationPlugin):
         response = send_message(client=client, conversation_id=conversation_id, blocks=blocks)
         response_timestamp = response["timestamp"]
 
+     def health_check(): return "OK"
+            
         if case.signal_instances:
             signal_response = None
 
